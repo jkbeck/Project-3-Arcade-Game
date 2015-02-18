@@ -1,5 +1,4 @@
 # Project-3-Arcade-Game
-Project 3 Arcade Game
 
 Use arrow keys to move.
 
