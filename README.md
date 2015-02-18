@@ -1,6 +1,13 @@
-frontend-nanodegree-arcade-game
-===============================
+User arrow keys to move.
 
-Students should use this rubric: https://www.udacity.com/course/viewer#!/c-ud015/l-3072058665/m-3072588797
+Avoid bugs!
 
-for self-checking their submission.
+Pick up gems!
+
+Orange gem will destroy all bugs.
+
+Blue gem will slow down all visible bugs.
+
+Green gem will teleport the player to a safe spot.
+
+Enjoy!
