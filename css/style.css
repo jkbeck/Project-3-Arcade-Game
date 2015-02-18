@@ -1,3 +1,9 @@
 body {
     text-align: center;
 }
+
+.rules {
+font-size: 18px;
+font-family: sans-serif;
+line-height: 0.5;
+}
