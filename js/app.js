@@ -11,7 +11,7 @@ var Enemy = function() {
     this.y = this.lanes[this.pickLane];
     this.speed = 50;
     this.sprite = 'images/enemy-bug.png';
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -33,7 +33,7 @@ var Player = function() {
     this.x = this.xBlock * 3;
     this.y = 476;
     this.sprite = 'images/char-boy.png';
-}
+};
 
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
@@ -78,7 +78,7 @@ var Gem = function() {
         'images/gem-orange.png'
     ];
     this.sprite = this.gem[this.pickGem];
-}
+};
 
 // Draw the gem on the screen, required method for game
 Gem.prototype.render = function() {
