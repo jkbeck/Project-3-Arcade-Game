@@ -17,12 +17,12 @@ var Enemy = function() {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
     this.x += this.speed * dt;
-}
+};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 var Player = function() {
     //block width (x) & height (y) used to
@@ -38,11 +38,11 @@ var Player = function() {
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 Player.prototype.update = function() {
     checkCollisions();
-}
+};
 
 //Change keyboard input into player movement
 Player.prototype.handleInput = function(direction) {
@@ -58,7 +58,7 @@ Player.prototype.handleInput = function(direction) {
         return false;
     }
     //console.log('Player: X= ' + this.x + ' Y= ' + this.y);
-}
+};
 
 //Create Gem object
 var Gem = function() {
@@ -85,7 +85,7 @@ Gem.prototype.render = function() {
     //Need to offset the draw coordinates due to scaling down of image
     //Keeping this.x and this.y untouched to allow for ease of collision detection
     ctx.drawImage(Resources.get(this.sprite), this.x + 25, this.y + 55, 51, 86);
-}
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -138,9 +138,9 @@ function checkCollisions() {
                 if(player.x > (enemy.x - 80)){
                     player.x = 303;
                     player.y = 476;
-                };
+                }
             }
-        })
+        });
     }
     if(gem !== undefined) {
         if(gem.x === player.x && gem.y === player.y) {
@@ -150,7 +150,7 @@ function checkCollisions() {
                 allEnemies.forEach(function(enemy) {
                     enemy.speed = 20;
                     enemy.sprite = 'images/blue-bug.png';
-                })
+                });
                 gem = new Gem();
             } else if(gem.pickGem === 1) {
                 //Green gem teleports player to safe spot
